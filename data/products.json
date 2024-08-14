@@ -76,7 +76,7 @@
     "id": 5,
     "category": "lip",
     "title": "Dewyplump Collagen Lip Gel",
-    "short": "Clean High-performance Lip Plumper",
+    "short": "Clean High-performance",
     "description": [
       "The shine of a gloss. The texture of a gel. The hydration of a lip serum. More Than Gloss. A Collagen-Boosting Treatment. Our all-clean, 100% vegan Collagen Lip Gel drenches even the driest lips in nutrient-rich plumping moisture, a weightless cushiony texture and a juicy hint of non-sticky, high-shine color."
     ],
@@ -196,6 +196,40 @@
   {
     "id": 12,
     "category": "eyes",
+    "title": "Check My Glow",
+    "short": "Illuminating Highlighter",
+    "description": [
+      "A gradient of shimmering, creamy powders ranging from subtle satin to show-stopping holographic creates a universally flattering glow. The silky-smooth formula melts into skin, diffusing light for a lit-from-within, radiant highlight. Multidimensional pigments can be worn on the face, body, or eyes."
+    ],
+    "image": "check-my-glow.webp",
+    "route": "check-my-glow",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 40,
+    "discount": 0,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 13,
+    "category": "eyes",
+    "title": "Pick It Up",
+    "short": "Contour & Bronzer Duo",
+    "description": [
+      "So easy to use, you’ll be sculpted in seconds. Hydrating cream contour is formulated with Squalene and Cellulose to glide on, giving you instant lift. Silky soft-matte powder bronzer blends seamlessly for natural, sunkissed warmth. Made to layer effortlessly for a smooth finish, never streaky."
+    ],
+    "image": "pick-it-up.webp",
+    "route": "pick-it-up",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 40,
+    "discount": 30,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 14,
+    "category": "eyes",
     "title": "Staring Mascara",
     "short": "Lifting Mascara",
     "description": [
@@ -213,7 +247,7 @@
     "comming": false
   },
   {
-    "id": 13,
+    "id": 15,
     "category": "eyes",
     "title": "Line It Up",
     "short": "24hr Waterproof Gel Liner",
@@ -231,7 +265,7 @@
     "comming": false
   },
   {
-    "id": 14,
+    "id": 16,
     "category": "eyes",
     "title": "Pout to Get Real",
     "short": "Matte Lip Liner With Dual-ended Lip Brush",
@@ -249,25 +283,7 @@
     "comming": false
   },
   {
-    "id": 15,
-    "category": "eyes",
-    "title": "Most Def",
-    "short": "Instant Definition Sculpting Eyebrow Pencil For Bold Brows",
-    "description": [
-      "Create defined and sculpted brows instantly with this easy-to-use chisel-tipped brow pencil that’s long-wearing, transfer-proof, and sweat-proof.",
-      "A clean eyebrow pencil that fills, shapes, and sculpts brows for easy, instant definition. Its wide-angled, chisel-shaped tip allows for controlled sculpting and filling, smoothly gliding on transfer-proof, sweatproof color for up to 12 hours. Includes a shaping spoolie brush. Like all GXVE products, this eyebrow pencil is vegan, cruelty-free, and formulated clean."
-    ],
-    "image": "most-def.webp",
-    "route": "most-def",
-    "price": 22.6,
-    "quantity": 1,
-    "stock": 30,
-    "discount": 20,
-    "new": false,
-    "comming": false
-  },
-  {
-    "id": 16,
+    "id": 17,
     "category": "eyes",
     "title": "Hella on Point",
     "short": "Ultra-Fine Eyebrow Pencil For Natural Brows",
@@ -285,7 +301,7 @@
     "comming": true
   },
   {
-    "id": 17,
+    "id": 18,
     "category": "eyes",
     "title": "Paint It Up",
     "short": "24HR Cream Eyeshadow",
@@ -304,7 +320,7 @@
     "comming": false
   },
   {
-    "id": 18,
+    "id": 19,
     "category": "eyes",
     "title": "Eye See In Color",
     "short": "Multidimensional Eye Quad",
@@ -322,36 +338,20 @@
     "comming": false
   },
   {
-    "id": 19,
-    "category": "eyes",
-    "title": "Pick It Up",
-    "short": "Contour & Bronzer Duo",
-    "description": [
-      "So easy to use, you’ll be sculpted in seconds. Hydrating cream contour is formulated with Squalene and Cellulose to glide on, giving you instant lift. Silky soft-matte powder bronzer blends seamlessly for natural, sunkissed warmth. Made to layer effortlessly for a smooth finish, never streaky."
-    ],
-    "image": "pick-it-up.webp",
-    "route": "pick-it-up",
-    "price": 19.99,
-    "quantity": 1,
-    "stock": 40,
-    "discount": 30,
-    "new": false,
-    "comming": false
-  },
-  {
     "id": 20,
     "category": "eyes",
-    "title": "Check My Glow",
-    "short": "Illuminating Highlighter",
+    "title": "Most Def",
+    "short": "Instant Definition Sculpting Eyebrow Pencil For Bold Brows",
     "description": [
-      "A gradient of shimmering, creamy powders ranging from subtle satin to show-stopping holographic creates a universally flattering glow. The silky-smooth formula melts into skin, diffusing light for a lit-from-within, radiant highlight. Multidimensional pigments can be worn on the face, body, or eyes."
+      "Create defined and sculpted brows instantly with this easy-to-use chisel-tipped brow pencil that’s long-wearing, transfer-proof, and sweat-proof.",
+      "A clean eyebrow pencil that fills, shapes, and sculpts brows for easy, instant definition. Its wide-angled, chisel-shaped tip allows for controlled sculpting and filling, smoothly gliding on transfer-proof, sweatproof color for up to 12 hours. Includes a shaping spoolie brush. Like all GXVE products, this eyebrow pencil is vegan, cruelty-free, and formulated clean."
     ],
-    "image": "check-my-glow.webp",
-    "route": "check-my-glow",
-    "price": 19.99,
+    "image": "most-def.webp",
+    "route": "most-def",
+    "price": 22.6,
     "quantity": 1,
-    "stock": 40,
-    "discount": 0,
+    "stock": 30,
+    "discount": 20,
     "new": false,
     "comming": false
   }
