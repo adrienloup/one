@@ -1,10 +1,13 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./index.scss";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { AllProviders } from './utils/combineProviders';
+import App from './App.tsx';
+import './index.scss';
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('_one_1em0m_3')!).render(
   <StrictMode>
-    <App />
+    <AllProviders>
+      <App />
+    </AllProviders>
   </StrictMode>
 );
