@@ -1,0 +1,13 @@
+.image {
+  display: flex;
+  overflow: hidden;
+}
+
+.loader {
+  margin: auto;
+
+  &::before {
+    width: 2.5rem;
+    border-width: 0.35rem;
+  }
+}
