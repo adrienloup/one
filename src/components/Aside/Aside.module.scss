@@ -1,0 +1,10 @@
+$mobile-portrait: 768px;
+
+.aside {
+  width: 14rem;
+  background-color: var(--color-1);
+
+  @media (max-width: $mobile-portrait) {
+    width: 100%;
+  }
+}
