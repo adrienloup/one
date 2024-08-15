@@ -7,7 +7,7 @@
       "Bubble Pop Electric is a high-performance lip gloss with a rich, ultra-smooth formula containing spherical powders for even application and superior wet, glass-like shine.",
       "The creamy, cushiony texture melts into lips, wrapping them in comfortable, non-sticky luminous color that won’t move or bleed."
     ],
-    "image": "lip.webp",
+    "image": "lip.avif",
     "route": "lip"
   },
   {
@@ -20,7 +20,7 @@
       "This formula contains omega-rich oils, plus skin-soothing aloe & meadowfoam seed oil.",
       "Like all GXVE products, this facial oil is vegan, cruelty-free, and formulated clean."
     ],
-    "image": "face.webp",
+    "image": "face.avif",
     "route": "face"
   },
   {
@@ -32,7 +32,7 @@
       "Silky soft-matte powder bronzer blends seamlessly for natural, sunkissed warmth.",
       "Made to layer effortlessly for a smooth finish, never streaky."
     ],
-    "image": "eyes.webp",
+    "image": "eyes.avif",
     "route": "eyes"
   }
 ]
