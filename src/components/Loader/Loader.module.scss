@@ -1,0 +1,26 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    display: block;
+    border-style: solid;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    animation: Rotate 1s linear infinite;
+    border-color: var(--color-4);
+    border-right-color: var(--color-3);
+  }
+}
+
+@keyframes Rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
