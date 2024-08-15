@@ -1,0 +1,85 @@
+$mobile-landscape: 1024px;
+
+.failure {
+  margin: 0.5rem 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.loader {
+  margin: 0.5rem 0.5rem 0;
+
+  &::before {
+    width: 5rem;
+    border-width: 0.5rem;
+  }
+}
+
+.content {
+  margin: 0 0.5rem;
+  padding: 0 1rem 4rem;
+  background-color: var(--color-1);
+
+  @media (max-width: $mobile-landscape) {
+    padding-bottom: 1rem;
+  }
+}
+
+.inner {
+  width: 40rem;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-landscape) {
+    width: 100%;
+  }
+}
+
+.image {
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+.price {
+  margin-top: 1.75rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.sales {
+  text-decoration: line-through;
+  color: var(--color-3);
+}
+
+.discount {
+  color: var(--color-4);
+}
+
+.short {
+  margin-top: 1.5rem;
+  line-height: 1.25;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.description {
+  line-height: 1.25;
+  font-size: 1.5rem;
+
+  p {
+    margin-top: 1rem;
+  }
+}
+
+.button {
+  margin: 2.25rem auto 0;
+  padding: 1.25rem;
+  background-color: var(--color-5);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
