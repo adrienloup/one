@@ -1,0 +1,29 @@
+.radio {
+  position: relative;
+  text-transform: uppercase;
+}
+
+.input {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  opacity: 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    outline: 0.5rem solid var(--color-4);
+    outline-offset: -0.25rem;
+  }
+}
+
+.icon {
+  font-size: 2rem;
+}
