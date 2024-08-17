@@ -1,14 +1,19 @@
+import { SizeType } from '../../models/Size';
 import styles from './Loader.module.scss';
 
 interface LoaderProps {
   cssClass?: string;
-  size?: string;
+  size?: SizeType;
 }
 
-export const LoaderComponent = ({ cssClass }: LoaderProps) => {
+export const LoaderComponent = ({ cssClass, size = 'medium' }: LoaderProps) => {
   return (
     <div
-      className={[styles.loader, cssClass ? ` ${cssClass}` : ''].join('')}
+      className={[
+        styles.loader,
+        ` ${styles[size]}`,
+        cssClass ? ` ${cssClass}` : '',
+      ].join('')}
     ></div>
   );
 };

@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem;
 
   &::before {
     content: '';
@@ -12,6 +13,27 @@
     animation: Rotate 1s linear infinite;
     border-color: var(--color-4);
     border-right-color: var(--color-3);
+  }
+}
+
+.small {
+  &::before {
+    width: 2rem;
+    border-width: 0.4rem;
+  }
+}
+
+.medium {
+  &::before {
+    width: 3rem;
+    border-width: 0.5rem;
+  }
+}
+
+.large {
+  &::before {
+    width: 5rem;
+    border-width: 0.6rem;
   }
 }
 

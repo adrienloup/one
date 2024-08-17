@@ -1,14 +1,15 @@
 interface ListProps {
-  tag?: keyof JSX.IntrinsicElements;
   cssClass?: string;
+  tag?: keyof JSX.IntrinsicElements;
   list: JSX.Element[] | undefined;
 }
 
 export const ListComponent = ({
-  tag: Tag = 'div',
   cssClass,
+  tag: Tag = 'div',
   list,
 }: ListProps) => {
-  console.log('ListComponent');
+  // console.log('ListComponent');
+
   return <Tag className={cssClass}>{list}</Tag>;
 };

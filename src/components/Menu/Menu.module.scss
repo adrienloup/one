@@ -1,29 +1,37 @@
+$mobile-portrait: 768px;
+
 .menu {
   flex: 1;
   display: flex;
   justify-content: center;
+}
 
-  a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0 1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--color-2);
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  background-color: var(--color-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-2);
 
-    &:hover {
-      outline: 0.5rem solid var(--color-4);
-      outline-offset: -0.5rem;
-    }
+  @media (max-width: $mobile-portrait) {
+    font-size: 0;
   }
 
-  :global(.active) {
-    background-color: var(--color-4);
-    color: var(--color-1);
+  &:hover,
+  &:focus-visible {
+    outline: 0.5rem solid var(--color-4);
+    outline-offset: -0.5rem;
   }
+}
+
+.active {
+  color: var(--color-3);
 }
 
 .icon {
