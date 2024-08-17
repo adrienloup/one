@@ -8,6 +8,13 @@
   top: -100%;
   left: -100%;
   opacity: 0;
+
+  &:focus-visible {
+    & + .label {
+      outline: 0.5rem solid var(--color-4);
+      outline-offset: -0.25rem;
+    }
+  }
 }
 
 .label {
@@ -16,6 +23,7 @@
   gap: 0.25rem;
   padding: 0.25rem;
   font-weight: bold;
+  font-size: 1.25rem;
   cursor: pointer;
 
   &:hover {

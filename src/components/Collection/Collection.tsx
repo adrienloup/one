@@ -1,23 +1,27 @@
-import { Link } from 'react-router-dom';
-import { useCollection } from '../../hooks/useCollection';
+import { useTransitionPage } from '../../hooks/useTransitionPage';
 import { CollectionType } from '../../models/Collection';
-import { FailureComponent } from '../Failure/Failure';
-import { LoaderComponent } from '../Loader/Loader';
-import { ListComponent } from '../List/List';
-import { TitleComponent } from '../Title/Title';
 import { ImageComponent } from '../Image/Image';
 import styles from './Collection.module.scss';
 
-export const CollectionComponent = () => {
+interface CollectionProps {
+  cssClass?: string;
+  collection: CollectionType;
+}
+
+export const CollectionComponent = ({
+  cssClass,
+  collection,
+}: CollectionProps) => {
   // console.log("CollectionComponent");
 
-  const { loading, errors, collections } = useCollection();
+  const { goTo } = useTransitionPage();
 
-  const listed = collections?.map((collection: CollectionType) => (
-    <Link
-      key={collection.id}
-      className={styles.collection}
-      to={collection.route}
+  return (
+    <div
+      className={[styles.collection, cssClass ? ` ${cssClass}` : ''].join('')}
+      onClick={() => {
+        goTo(`/one/collection/${collection.route}`);
+      }}
     >
       <div className={styles.inner}>
         <div className={styles.title}>{collection.title}</div>
@@ -27,23 +31,6 @@ export const CollectionComponent = () => {
           alt={collection.title}
         />
       </div>
-    </Link>
-  ));
-
-  return (
-    <>
-      {loading && <LoaderComponent cssClass={styles.loader} />}
-      {collections && collections.length > 0 ? (
-        <>
-          <TitleComponent tag="h2">Collections</TitleComponent>
-          <ListComponent cssClass={styles.collections} list={listed} />
-        </>
-      ) : null}
-      {errors && (
-        <FailureComponent cssClass={styles.failure}>
-          Failed to fetch :(
-        </FailureComponent>
-      )}
-    </>
+    </div>
   );
 };

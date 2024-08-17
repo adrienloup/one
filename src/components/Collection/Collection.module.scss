@@ -1,36 +1,17 @@
 $mobile-portrait: 768px;
 
-.failure {
-  margin: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.loader {
-  margin-top: 0.5rem;
-
-  &::before {
-    width: 5rem;
-    border-width: 0.5rem;
-  }
-}
-
-.collections {
-  display: flex;
-  flex-flow: row wrap;
-  padding-left: 0.5rem;
-}
-
 .collection {
   position: relative;
   display: flex;
   width: calc(100% / 3);
-  height: 15rem;
+  height: 30rem;
   padding: 0 0.5rem 0.5rem 0;
-  text-decoration: none;
+  cursor: pointer;
 
   @media (max-width: $mobile-portrait) {
     width: 100%;
-    height: 25rem;
+    height: 15rem;
+    padding-bottom: 0.5rem;
   }
 
   &::after {
@@ -70,13 +51,6 @@ $mobile-portrait: 768px;
 
 .image {
   flex: 1;
-
-  img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
 }
 
 .title {
@@ -89,9 +63,9 @@ $mobile-portrait: 768px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: var(--color-2);
 }
