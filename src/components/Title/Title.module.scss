@@ -6,14 +6,15 @@ $mobile-portrait: 768px;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--color-1);
 
   @media (max-width: $mobile-landscape) {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
   }
 
   @media (max-width: $mobile-portrait) {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    font-size: 1.75rem;
   }
 }

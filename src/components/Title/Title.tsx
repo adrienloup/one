@@ -2,13 +2,13 @@ import { SlotType } from '../../models/Slot';
 import styles from './Title.module.scss';
 
 interface TitleProps extends SlotType {
-  tag?: keyof JSX.IntrinsicElements;
   cssClass?: string;
+  tag?: keyof JSX.IntrinsicElements;
 }
 
 export const TitleComponent = ({
-  children,
   tag: Tag = 'h1',
+  children,
   cssClass,
 }: TitleProps) => {
   // console.log('TitleComponent');
