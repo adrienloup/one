@@ -1,11 +1,12 @@
-import { memo, ReactNode } from 'react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { SlotType } from '../../models/Slot';
 import styles from './Button.module.scss';
 
-interface ButtonProps {
+interface ButtonProps extends SlotType {
   cssClass?: string;
-  children: ReactNode;
   type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
   href?: string;
   to?: string;
   onClick?: () => void;
@@ -14,14 +15,14 @@ interface ButtonProps {
 export const ButtonComponent = memo(
   ({
     cssClass,
-    children,
     type = 'button',
+    disabled = false,
     href,
     to,
     onClick,
-    ...rest
+    children,
   }: ButtonProps) => {
-    console.log('ButtonComponent');
+    // console.log('ButtonComponent');
 
     const link = (
       <Link
@@ -38,7 +39,6 @@ export const ButtonComponent = memo(
         target="_blank"
         rel="noopener"
         className={[styles.button, cssClass ? ` ${cssClass}` : ''].join('')}
-        {...rest}
       >
         {children}
       </a>
@@ -48,8 +48,8 @@ export const ButtonComponent = memo(
       <button
         type={type}
         className={[styles.button, cssClass ? ` ${cssClass}` : ''].join('')}
+        disabled={disabled}
         onClick={onClick}
-        {...rest}
       >
         {children}
       </button>

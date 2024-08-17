@@ -1,0 +1,10 @@
+$mobile-portrait: 768px;
+
+.cards {
+  display: flex;
+  padding-left: 0.5rem;
+
+  @media (max-width: $mobile-portrait) {
+    flex-direction: column;
+  }
+}

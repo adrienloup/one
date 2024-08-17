@@ -7,4 +7,9 @@
   font-family: var(--font-text);
   text-decoration: none;
   cursor: pointer;
+
+  &:disabled {
+    background-color: var(--color-3);
+    cursor: default;
+  }
 }

@@ -1,0 +1,43 @@
+$mobile-landscape: 1024px;
+$mobile-portrait: 768px;
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  width: 33.3333333333%;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  background-color: var(--color-1);
+
+  @media (max-width: $mobile-portrait) {
+    width: 100%;
+  }
+}
+
+.title {
+  padding: 2rem 2rem 1rem;
+  font-weight: bold;
+  font-size: 1.75rem;
+
+  @media (max-width: $mobile-landscape) {
+    padding: 1rem 1rem 0.5rem;
+  }
+}
+
+.text {
+  padding: 0 2rem 2rem;
+  line-height: 1.25;
+  font-size: 1.5rem;
+
+  @media (max-width: $mobile-landscape) {
+    padding: 0 1rem 1rem;
+  }
+}
+
+.image {
+  height: 20rem;
+
+  @media (max-width: $mobile-portrait) {
+    display: none;
+  }
+}
