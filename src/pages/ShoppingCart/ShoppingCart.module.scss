@@ -1,17 +1,17 @@
 $mobile-landscape: 1024px;
+$mobile-portrait: 768px;
 
 .failure {
-  margin: 0 0.5rem 0.5rem;
-  font-size: 1.5rem;
+  margin-top: 0;
 }
 
 .content {
   margin: 0 0.5rem 0.5rem;
-  padding: 0 1rem 4rem;
+  padding: 4rem 1rem;
   background-color: var(--color-1);
 
   @media (max-width: $mobile-landscape) {
-    padding-bottom: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -26,44 +26,83 @@ $mobile-landscape: 1024px;
 
 .product {
   display: flex;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 0.15rem solid var(--color-3);
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: $mobile-portrait) {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .image {
-  width: 8rem;
-  height: 10rem;
-
-  img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
+  width: 10rem;
+  height: 14rem;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  gap: 0.75rem;
-  padding-left: 1rem;
+  gap: 1rem;
 }
 
 .title {
-  font-size: 1.25rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.quantity {
+  font-size: 1.5rem;
 }
 
 .price {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.decremented,
+.incremented,
+.removed,
+.cleared {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-5);
+  font-size: 1.75rem;
+  color: var(--color-2);
 }
 
 .sales {
   text-decoration: line-through;
+  color: var(--color-3);
 }
 
 .discount {
-  color: var(--color-neutral-3);
+  color: var(--color-4);
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.order {
+  margin: 2.25rem auto 0;
+  padding: 1.25rem;
+  background-color: var(--color-5);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-2);
 }

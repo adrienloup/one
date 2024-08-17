@@ -1,15 +1,19 @@
 import { memo } from 'react';
+import { useTitle } from '../../hooks/useTitle';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
 import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
 import { ArticleComponent } from '../../components/Article/Article';
 import { HeroComponent } from '../../components/Hero/Hero';
-import { CollectionComponent } from '../../components/Collection/Collection';
-// import { FavoriteComponent } from '../../components/Favorite/Favorite';
+import { CollectionsComponent } from '../../components/Collections/Collections';
+import { FavoritesComponent } from '../../components/Favorites/Favorites';
+import { CardsComponent } from '../../components/Cards/Cards';
 
 function HomePage() {
   console.log('HomePage');
+
+  useTitle('Welcome');
 
   return (
     <>
@@ -17,8 +21,9 @@ function HomePage() {
       <MainComponent>
         <ArticleComponent>
           <HeroComponentMemo />
-          <CollectionComponentMemo />
-          {/* <FavoriteComponentMemo /> */}
+          <FavoritesComponentMemo />
+          <CollectionsComponentMemo />
+          <CardsComponentMemo />
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
@@ -29,8 +34,9 @@ function HomePage() {
 
 const HeaderComponentMemo = memo(HeaderComponent);
 const HeroComponentMemo = memo(HeroComponent);
-const CollectionComponentMemo = memo(CollectionComponent);
-// const FavoriteComponentMemo = memo(FavoriteComponent);
+const FavoritesComponentMemo = memo(FavoritesComponent);
+const CollectionsComponentMemo = memo(CollectionsComponent);
+const CardsComponentMemo = memo(CardsComponent);
 const FooterComponentMemo = memo(FooterComponent);
 
 export default HomePage;
