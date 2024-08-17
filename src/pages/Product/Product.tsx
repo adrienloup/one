@@ -1,7 +1,10 @@
 import { memo } from 'react';
+import { useTitle } from '../../hooks/useTitle';
 import { useLocation } from 'react-router-dom';
 import { useProduct } from '../../hooks/useProduct';
+import { useAlertDispatch } from '../../hooks/useAlert';
 import { useShoppingCartDispatch } from '../../hooks/useShoppingCart';
+import { ProductType } from '../../models/Product';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
@@ -11,7 +14,7 @@ import { TitleComponent } from '../../components/Title/Title';
 import { LoaderComponent } from '../../components/Loader/Loader';
 import { FailureComponent } from '../../components/Failure/Failure';
 import { ImageComponent } from '../../components/Image/Image';
-import { CollectionComponent } from '../../components/Collection/Collection';
+import { CollectionsComponent } from '../../components/Collections/Collections';
 import { ButtonComponent } from '../../components/Button/Button';
 import styles from './Product.module.scss';
 
@@ -19,19 +22,33 @@ function ProductPage() {
   console.log('ProductPage');
 
   const { loading, errors, products } = useProduct();
-  const dispatch = useShoppingCartDispatch();
+  const { addAlert } = useAlertDispatch();
+  const productDispatch = useShoppingCartDispatch();
   const location = useLocation();
 
   const product = products?.filter(
     (product) => product.route === location.pathname.split('/').pop()
   );
 
+  const onClick = (product: ProductType) => {
+    productDispatch({
+      type: 'added',
+      payload: product,
+    });
+
+    addAlert({
+      title: `${product.title} added`,
+    });
+  };
+
+  useTitle(product ? product[0].title : 'Product');
+
   return (
     <>
       <HeaderComponentMemo />
       <MainComponent>
         <ArticleComponent>
-          {loading && <LoaderComponent cssClass={styles.loader} />}
+          {loading && <LoaderComponent cssClass={styles.loader} size="large" />}
           {product && (
             <>
               <TitleComponent>{product[0].title}</TitleComponent>
@@ -42,6 +59,9 @@ function ProductPage() {
                     src={`/one/data/products/${product[0].image}`}
                     alt={product[0].title}
                   />
+                  <div className={styles.collection}>
+                    {product[0].collection} collection
+                  </div>
                   <div className={styles.price}>
                     {product[0].discount > 0 ? (
                       <>
@@ -65,12 +85,7 @@ function ProductPage() {
                   </div>
                   <ButtonComponent
                     cssClass={styles.button}
-                    onClick={() => {
-                      dispatch!({
-                        type: 'added',
-                        payload: product[0],
-                      });
-                    }}
+                    onClick={() => onClick(product[0])}
                   >
                     Add to shopping cart
                   </ButtonComponent>
@@ -83,7 +98,7 @@ function ProductPage() {
               Failed to fetch :(
             </FailureComponent>
           )}
-          <CollectionComponent />
+          <CollectionsComponent />
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
