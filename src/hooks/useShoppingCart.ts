@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import {
   ShoppingCartContext,
   ShoppingCartDispatchContext,
-} from '../contexts/ShoppingCartContext';
+} from '../contexts/ShoppingCart';
 
 export function useShoppingCart() {
   return useContext(ShoppingCartContext);
