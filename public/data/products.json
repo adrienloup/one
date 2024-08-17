@@ -200,6 +200,7 @@
     "title": "Dewyplump Collagen Cheek Tint",
     "short": "Clean, High-Performance Liquid Blush",
     "description": [
+      "Our high-performance liquid blush glides on and melts in—depositing skin-loving moisture, a buildable blendable formula and decadently creamy, luminous color.",
       "Our high-performance liquid blush glides on and melts in—depositing skin-loving moisture, a buildable blendable formula and decadently creamy, luminous color."
     ],
     "image": "dewyplump-collagen-cheek-tint.webp",
@@ -213,26 +214,7 @@
   },
   {
     "id": 12,
-    "collection": "Eyes",
-    "title": "Check My Glow",
-    "short": "Illuminating Highlighter",
-    "description": [
-      "A gradient of shimmering, creamy powders ranging from subtle satin to show-stopping holographic creates a universally flattering glow.",
-      "The silky-smooth formula melts into skin, diffusing light for a lit-from-within, radiant highlight.",
-      "Multidimensional pigments can be worn on the face, body, or eyes."
-    ],
-    "image": "check-my-glow.webp",
-    "route": "check-my-glow",
-    "price": 19.99,
-    "quantity": 1,
-    "stock": 40,
-    "discount": 0,
-    "new": false,
-    "comming": false
-  },
-  {
-    "id": 13,
-    "collection": "Eyes",
+    "collection": "Face",
     "title": "Pick It Up",
     "short": "Contour & Bronzer Duo",
     "description": [
@@ -251,7 +233,46 @@
     "comming": false
   },
   {
+    "id": 13,
+    "collection": "Face",
+    "title": "Eye See In Color",
+    "short": "Multidimensional Quad",
+    "description": [
+      "Highly-pigmented, rich, buttery, blendable quad eyeshadow palettes in four curated shades, made to customize for every occasion.",
+      "These high-pigment eyeshadows were color-curated to easily create complete eye looks in just one palette—from subtle nude to dramatic smoky and everything in between.",
+      "The blendable, creamy, and no-crease formulas give ultra-rich color payoff in buttery, multidimensional finishes.",
+      "Apply with fingers or brushes. Like all One Beauty products, these eye shadows are vegan, cruelty-free, and formulated clean."
+    ],
+    "image": "eye-see-in-color.webp",
+    "route": "eye-see-in-color",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 30,
+    "discount": 0,
+    "new": true,
+    "comming": false
+  },
+  {
     "id": 14,
+    "collection": "Face",
+    "title": "Check My Glow",
+    "short": "Illuminating Highlighter",
+    "description": [
+      "A gradient of shimmering, creamy powders ranging from subtle satin to show-stopping holographic creates a universally flattering glow.",
+      "The silky-smooth formula melts into skin, diffusing light for a lit-from-within, radiant highlight.",
+      "Multidimensional pigments can be worn on the face, body, or eyes."
+    ],
+    "image": "check-my-glow.webp",
+    "route": "check-my-glow",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 40,
+    "discount": 0,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 15,
     "collection": "Eyes",
     "title": "Staring Mascara",
     "short": "Lifting Mascara",
@@ -270,7 +291,7 @@
     "comming": false
   },
   {
-    "id": 15,
+    "id": 16,
     "collection": "Eyes",
     "title": "Line It Up",
     "short": "24hr Waterproof Gel Liner",
@@ -290,7 +311,7 @@
     "comming": false
   },
   {
-    "id": 16,
+    "id": 17,
     "collection": "Eyes",
     "title": "Pout to Get Real",
     "short": "Matte Lip Liner With Dual-ended Lip Brush",
@@ -309,7 +330,7 @@
     "comming": false
   },
   {
-    "id": 17,
+    "id": 18,
     "collection": "Eyes",
     "title": "Hella on Point",
     "short": "Ultra-Fine Eyebrow Pencil For Natural Brows",
@@ -331,7 +352,7 @@
     "comming": true
   },
   {
-    "id": 18,
+    "id": 19,
     "collection": "Eyes",
     "title": "Paint It Up",
     "short": "24HR Cream Eyeshadow",
@@ -347,26 +368,6 @@
     "stock": 30,
     "discount": 0,
     "new": false,
-    "comming": false
-  },
-  {
-    "id": 19,
-    "collection": "Eyes",
-    "title": "Eye See In Color",
-    "short": "Multidimensional Eye Quad",
-    "description": [
-      "Highly-pigmented, rich, buttery, blendable quad eyeshadow palettes in four curated shades, made to customize for every occasion.",
-      "These high-pigment eyeshadows were color-curated to easily create complete eye looks in just one palette—from subtle nude to dramatic smoky and everything in between.",
-      "The blendable, creamy, and no-crease formulas give ultra-rich color payoff in buttery, multidimensional finishes.",
-      "Apply with fingers or brushes. Like all One Beauty products, these eye shadows are vegan, cruelty-free, and formulated clean."
-    ],
-    "image": "eye-see-in-color.webp",
-    "route": "eye-see-in-color",
-    "price": 19.99,
-    "quantity": 1,
-    "stock": 30,
-    "discount": 0,
-    "new": true,
     "comming": false
   },
   {
