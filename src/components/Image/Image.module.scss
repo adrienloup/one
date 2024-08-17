@@ -1,13 +1,15 @@
 .image {
-  display: flex;
+  display: inline-flex;
   overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
 }
 
 .loader {
   margin: auto;
-
-  &::before {
-    width: 2.5rem;
-    border-width: 0.35rem;
-  }
 }

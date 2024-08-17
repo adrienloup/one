@@ -1,11 +1,11 @@
 import styles from './Icon.module.scss';
 
 interface IconProps {
-  name: string;
   cssClass?: string;
+  name: string;
 }
 
-export const IconComponent = ({ name, cssClass }: IconProps) => {
+export const IconComponent = ({ cssClass, name }: IconProps) => {
   // console.log("IconComponent");
 
   return (

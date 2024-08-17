@@ -14,8 +14,8 @@ export const ImageComponent = ({ cssClass, src, alt }: ImageProps) => {
   const [loading, setLoading] = useState(true);
   const ref = useRef<HTMLImageElement | null>(null);
 
-  const imageLoad = () => setLoading(false);
-  const imageError = () => console.log(`Failed to ${src}'s image`);
+  const onLoad = () => setLoading(false);
+  const onError = () => console.log(`Failed to ${src}'s image`);
 
   return (
     <div className={[styles.image, cssClass ? ` ${cssClass}` : ''].join('')}>
@@ -24,8 +24,8 @@ export const ImageComponent = ({ cssClass, src, alt }: ImageProps) => {
         ref={ref}
         src={src}
         alt={alt}
-        onLoad={imageLoad}
-        onError={imageError}
+        onLoad={onLoad}
+        onError={onError}
         style={{
           display: loading ? 'none' : 'block',
         }}
