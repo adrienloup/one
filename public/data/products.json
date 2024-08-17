@@ -235,7 +235,7 @@
   {
     "id": 12,
     "collection": "Face",
-    "title": "Pick It Up",
+    "title": "Pick It Up Blue",
     "short": "Contour & Bronzer Duo",
     "description": [
       "So easy to use, you’ll be sculpted in seconds.",
@@ -243,8 +243,8 @@
       "Silky soft-matte powder bronzer blends seamlessly for natural, sunkissed warmth.",
       "Made to layer effortlessly for a smooth finish, never streaky."
     ],
-    "image": "pick-it-up.webp",
-    "route": "pick-it-up",
+    "image": "pick-it-up-blue.webp",
+    "route": "pick-it-up-blue",
     "price": 19.99,
     "quantity": 1,
     "stock": 40,
@@ -291,6 +291,26 @@
     "comming": false
   },
   {
+    "id": 12,
+    "collection": "Face",
+    "title": "Pick It Up Purple",
+    "short": "Contour & Bronzer Duo",
+    "description": [
+      "So easy to use, you’ll be sculpted in seconds.",
+      "Hydrating cream contour is formulated with Squalene and Cellulose to glide on, giving you instant lift.",
+      "Silky soft-matte powder bronzer blends seamlessly for natural, sunkissed warmth.",
+      "Made to layer effortlessly for a smooth finish, never streaky."
+    ],
+    "image": "pick-it-up-purple.webp",
+    "route": "pick-it-up-purple",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 40,
+    "discount": 30,
+    "new": false,
+    "comming": false
+  },
+  {
     "id": 14,
     "collection": "Face",
     "title": "Check My Glow",
@@ -306,6 +326,26 @@
     "quantity": 1,
     "stock": 40,
     "discount": 0,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 12,
+    "collection": "Face",
+    "title": "Pick It Up Green",
+    "short": "Contour & Bronzer Duo",
+    "description": [
+      "So easy to use, you’ll be sculpted in seconds.",
+      "Hydrating cream contour is formulated with Squalene and Cellulose to glide on, giving you instant lift.",
+      "Silky soft-matte powder bronzer blends seamlessly for natural, sunkissed warmth.",
+      "Made to layer effortlessly for a smooth finish, never streaky."
+    ],
+    "image": "pick-it-up-green.webp",
+    "route": "pick-it-up-green",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 40,
+    "discount": 30,
     "new": false,
     "comming": false
   },
