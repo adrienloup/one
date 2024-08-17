@@ -354,15 +354,15 @@
   {
     "id": 19,
     "collection": "Eyes",
-    "title": "Paint It Up",
+    "title": "Paint Brown It Up",
     "short": "24HR Cream Eyeshadow",
     "description": [
       "A buildable, cream-to-powder eyeshadow with built-in eye primer technology for crease-proof, smudge-proof, fade-resistant color and 24-hour wear.",
       "Squeeze a pea sized amount onto the back of the hand, fingertips, or directly onto a brush.",
       "Gently pat over the lid using a finger or use a dense shadow brush to swipe over lids, beginning at the center and blending outwards."
     ],
-    "image": "paint-it-up.webp",
-    "route": "paint-it-up",
+    "image": "paint-brown-it-up.webp",
+    "route": "paint-brown-it-up",
     "price": 16.8,
     "quantity": 1,
     "stock": 30,
@@ -387,6 +387,82 @@
     "quantity": 1,
     "stock": 30,
     "discount": 20,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 21,
+    "collection": "Eyes",
+    "title": "Most to Get Real",
+    "short": "Matte Lip Liner With Dual-ended Lip Brush",
+    "description": [
+      "Chisel-tipped lip liner with dual-ended lip brush to easily overline and contour lips for the look of a fuller, more defined pout.",
+      "This retractable lip liner is designed with a precision tip to easily sculpt lips into desired shape, a flat edge to fill lips with rich, comfortable color, and a lip brush to blend and diffuse harsh lines.",
+      "Layers seamlessly under lip gloss or lipstick to create the illusion of naturally fuller lips."
+    ],
+    "image": "most-to-get-real.webp",
+    "route": "most-to-get-real",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 30,
+    "discount": 0,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 22,
+    "collection": "Eyes",
+    "title": "Paint Blue It Up",
+    "short": "24HR Cream Eyeshadow",
+    "description": [
+      "A buildable, cream-to-powder eyeshadow with built-in eye primer technology for crease-proof, smudge-proof, fade-resistant color and 24-hour wear.",
+      "Squeeze a pea sized amount onto the back of the hand, fingertips, or directly onto a brush.",
+      "Gently pat over the lid using a finger or use a dense shadow brush to swipe over lids, beginning at the center and blending outwards."
+    ],
+    "image": "paint-blue-it-up.webp",
+    "route": "paint-blue-it-up",
+    "price": 16.8,
+    "quantity": 1,
+    "stock": 30,
+    "discount": 0,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 23,
+    "collection": "Eyes",
+    "title": "Paint Green It Up",
+    "short": "24HR Cream Eyeshadow",
+    "description": [
+      "A buildable, cream-to-powder eyeshadow with built-in eye primer technology for crease-proof, smudge-proof, fade-resistant color and 24-hour wear.",
+      "Squeeze a pea sized amount onto the back of the hand, fingertips, or directly onto a brush.",
+      "Gently pat over the lid using a finger or use a dense shadow brush to swipe over lids, beginning at the center and blending outwards."
+    ],
+    "image": "paint-green-it-up.webp",
+    "route": "paint-green-it-up",
+    "price": 16.8,
+    "quantity": 1,
+    "stock": 30,
+    "discount": 0,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 24,
+    "collection": "Eyes",
+    "title": "Paint Pink It Up",
+    "short": "24HR Cream Eyeshadow",
+    "description": [
+      "A buildable, cream-to-powder eyeshadow with built-in eye primer technology for crease-proof, smudge-proof, fade-resistant color and 24-hour wear.",
+      "Squeeze a pea sized amount onto the back of the hand, fingertips, or directly onto a brush.",
+      "Gently pat over the lid using a finger or use a dense shadow brush to swipe over lids, beginning at the center and blending outwards."
+    ],
+    "image": "paint-pink-it-up.webp",
+    "route": "paint-pink-it-up",
+    "price": 16.8,
+    "quantity": 1,
+    "stock": 30,
+    "discount": 0,
     "new": false,
     "comming": false
   }
