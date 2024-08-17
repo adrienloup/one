@@ -1,31 +1,36 @@
-import { useProduct } from '../../hooks/useProduct';
-import { FailureComponent } from '../Failure/Failure';
-import { LoaderComponent } from '../Loader/Loader';
-import { TitleComponent } from '../Title/Title';
-import { ProductComponent } from '../Product/Product';
+import { memo } from 'react';
+import { useTransitionPage } from '../../hooks/useTransitionPage';
+import { FavoriteType } from '../../models/Favorite';
+import { ImageComponent } from '../Image/Image';
 import styles from './Favorite.module.scss';
 
-export const FavoriteComponent = () => {
-  // console.log("FavoriteComponent");
+interface FavoriteProps {
+  cssClass?: string;
+  favorite: FavoriteType;
+}
 
-  const { loading, errors, products } = useProduct();
+export const FavoriteComponent = memo(
+  ({ cssClass, favorite }: FavoriteProps) => {
+    // console.log('FavoriteComponent');
 
-  return (
-    <>
-      <TitleComponent tag="h2">Favorites</TitleComponent>
-      {loading && <LoaderComponent cssClass={styles.loader} />}
-      {products && (
-        <div className={styles.products}>
-          <ProductComponent cssClass={styles.product} product={products![1]} />
-          <ProductComponent cssClass={styles.product} product={products![3]} />
-          <ProductComponent cssClass={styles.product} product={products![9]} />
+    const { goTo } = useTransitionPage();
+
+    return (
+      <div
+        className={[styles.favorite, cssClass ? ` ${cssClass}` : ''].join('')}
+        onClick={() => {
+          goTo(`/one/product/${favorite.route}`);
+        }}
+      >
+        <div className={styles.inner}>
+          <div className={styles.title}>{favorite.title}</div>
+          <ImageComponent
+            cssClass={styles.image}
+            src={`/one/data/products/${favorite.image}`}
+            alt={favorite.title}
+          />
         </div>
-      )}
-      {errors && (
-        <FailureComponent cssClass={styles.failure}>
-          Failed to fetch :(
-        </FailureComponent>
-      )}
-    </>
-  );
-};
+      </div>
+    );
+  }
+);
