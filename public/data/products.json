@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "category": "lip",
+    "collection": "lip",
     "title": "Bubble Pop Electric",
     "short": "High-Shine Lip Gloss",
     "description": [
@@ -20,7 +20,7 @@
   },
   {
     "id": 2,
-    "category": "lip",
+    "collection": "lip",
     "title": "I'm Still Here",
     "short": "High-Performance Matte Liquid",
     "description": [
@@ -39,7 +39,7 @@
   },
   {
     "id": 3,
-    "category": "lip",
+    "collection": "lip",
     "title": "Original Me",
     "short": "High-Performance Matte Lipstick",
     "description": [
@@ -47,7 +47,7 @@
       "Get Gwen’s signature lip or build your own with this luxurious lipstick available in brights and nudes that gives ultra-rich payoff and a velvety matte finish.",
       "The intensely pigmented formula glides on smoothly for bold, stay-true color in one swipe.",
       "Wears comfortably and stays put all day—no fading or feathering.",
-      "Like all GXVE products, this lipstick is vegan, cruelty-free, and formulated clean."
+      "Like all One products, this lipstick is vegan, cruelty-free, and formulated clean."
     ],
     "image": "original-me.webp",
     "route": "original-me",
@@ -60,14 +60,14 @@
   },
   {
     "id": 4,
-    "category": "lip",
+    "collection": "lip",
     "title": "Anaheim Shine",
     "short": "High-Performance Satin Lipstick",
     "description": [
       "A cushiony, high-performance lipstick with rich color payoff and a smooth-as-silk satin finish.",
       "Recreate Gwen’s signature lip look or build your own with this high-performance satin lipstick available in brights and nudes.",
       "With richly pigmented, stay-true color in just one swipe, this silky, cushiony formula glides smoothly onto lips and wears comfortably all day.",
-      "Like all GXVE products, this lipstick is vegan, cruelty-free, and formulated clean."
+      "Like all One products, this lipstick is vegan, cruelty-free, and formulated clean."
     ],
     "image": "anaheim-shine.webp",
     "route": "anaheim-shine",
@@ -80,7 +80,7 @@
   },
   {
     "id": 5,
-    "category": "lip",
+    "collection": "lip",
     "title": "Dewyplump Collagen Lip Gel",
     "short": "Clean High-performance",
     "description": [
@@ -100,7 +100,7 @@
   },
   {
     "id": 6,
-    "category": "lip",
+    "collection": "lip",
     "title": "Anaheim Line",
     "short": "Clean waterproof lip liner",
     "description": [
@@ -119,7 +119,7 @@
   },
   {
     "id": 7,
-    "category": "lip",
+    "collection": "lip",
     "title": "Spark The Fire",
     "short": "Clean plumping lip balm",
     "description": [
@@ -137,7 +137,7 @@
   },
   {
     "id": 8,
-    "category": "lip",
+    "collection": "lip",
     "title": "Xtra Sauce",
     "short": "Longwear Vinyl Liquid Lipstick",
     "description": [
@@ -156,7 +156,7 @@
   },
   {
     "id": 9,
-    "category": "lip",
+    "collection": "lip",
     "title": "Double Dippin",
     "short": "Long-wearing lipstick",
     "description": [
@@ -175,7 +175,7 @@
   },
   {
     "id": 10,
-    "category": "face",
+    "collection": "face",
     "title": "All Time Prime",
     "short": "Hydrating Multi-Use Prep",
     "description": [
@@ -183,7 +183,7 @@
       "This lightweight, multi-use oil delivers 24 hours of hydration and a visibly smoother, dewy complexion.",
       "Use alone to prep and prime skin, or mix with your foundation for a hydration boost.",
       "This formula contains omega-rich oils, plus skin-soothing aloe & meadowfoam seed oil.",
-      "Like all GXVE products, this facial oil is vegan, cruelty-free, and formulated clean."
+      "Like all One products, this facial oil is vegan, cruelty-free, and formulated clean."
     ],
     "image": "all-time-prime.webp",
     "route": "all-time-prime",
@@ -196,7 +196,7 @@
   },
   {
     "id": 11,
-    "category": "face",
+    "collection": "face",
     "title": "Dewyplump Collagen Cheek Tint",
     "short": "Clean, High-Performance Liquid Blush",
     "description": [
@@ -213,7 +213,7 @@
   },
   {
     "id": 12,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Check My Glow",
     "short": "Illuminating Highlighter",
     "description": [
@@ -232,7 +232,7 @@
   },
   {
     "id": 13,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Pick It Up",
     "short": "Contour & Bronzer Duo",
     "description": [
@@ -252,7 +252,7 @@
   },
   {
     "id": 14,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Staring Mascara",
     "short": "Lifting Mascara",
     "description": [
@@ -271,14 +271,14 @@
   },
   {
     "id": 15,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Line It Up",
     "short": "24hr Waterproof Gel Liner",
     "description": [
       "A waterproof eyeliner gel pencil with bold, high-impact pigment.",
       "The creamy formula glides on smoothly & blends out seamlessly for even, controlled application and high-performance color.",
       "Allows for some play time before it dries down to 24-hour wear that won’t budge.",
-      "Like all GXVE products, this eye liner is vegan, cruelty-free, and formulated clean."
+      "Like all One products, this eye liner is vegan, cruelty-free, and formulated clean."
     ],
     "image": "line-it-up.webp",
     "route": "line-it-up",
@@ -291,7 +291,7 @@
   },
   {
     "id": 16,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Pout to Get Real",
     "short": "Matte Lip Liner With Dual-ended Lip Brush",
     "description": [
@@ -310,7 +310,7 @@
   },
   {
     "id": 17,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Hella on Point",
     "short": "Ultra-Fine Eyebrow Pencil For Natural Brows",
     "description": [
@@ -319,7 +319,7 @@
       "The super-slim micro tip glides on easily, delivering ultra-fine, hair-like strokes that can fill even the smallest of gaps.",
       "Its super-soft formula delivers color that stays put for up to 12 hours of longwear.",
       "Plus, it's transfer-proof and sweat-proof.",
-      "Like all GXVE products, this eyebrow pencil is vegan, cruelty-free, and formulated clean."
+      "Like all One products, this eyebrow pencil is vegan, cruelty-free, and formulated clean."
     ],
     "image": "hella-on-point.webp",
     "route": "hella-on-point",
@@ -332,7 +332,7 @@
   },
   {
     "id": 18,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Paint It Up",
     "short": "24HR Cream Eyeshadow",
     "description": [
@@ -351,7 +351,7 @@
   },
   {
     "id": 19,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Eye See In Color",
     "short": "Multidimensional Eye Quad",
     "description": [
@@ -371,14 +371,14 @@
   },
   {
     "id": 20,
-    "category": "eyes",
+    "collection": "eyes",
     "title": "Most Def",
     "short": "Instant Definition Sculpting Eyebrow Pencil For Bold Brows",
     "description": [
       "Create defined and sculpted brows instantly with this easy-to-use chisel-tipped brow pencil that’s long-wearing, transfer-proof, and sweat-proof.",
       "A clean eyebrow pencil that fills, shapes, and sculpts brows for easy, instant definition.",
       "Its wide-angled, chisel-shaped tip allows for controlled sculpting and filling, smoothly gliding on transfer-proof, sweatproof color for up to 12 hours.",
-      "Includes a shaping spoolie brush. Like all GXVE products, this eyebrow pencil is vegan, cruelty-free, and formulated clean."
+      "Includes a shaping spoolie brush. Like all One products, this eyebrow pencil is vegan, cruelty-free, and formulated clean."
     ],
     "image": "most-def.webp",
     "route": "most-def",
