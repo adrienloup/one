@@ -1,27 +1,30 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 import {
   ComponentPropsWithoutRef,
   ComponentType,
-  FC,
+  ElementType,
   FunctionComponent,
   ReactNode,
 } from 'react';
-import { CollectionProvider } from '../contexts/CollectionContext';
-import { ProductProvider } from '../contexts/ProductContext';
-import { ShoppingCartProvider } from '../contexts/ShoppingCartContext';
+import { CollectionProvider } from '../contexts/Collection';
+import { ProductProvider } from '../contexts/Product';
+import { ShoppingCartProvider } from '../contexts/ShoppingCart';
+import { AlertProvider } from '../contexts/Alert';
 import { SlotType } from '../models/Slot';
 
-type Providers = [ComponentType<SlotType>, ComponentPropsWithoutRef<any>?][];
+type ProvidersType = [
+  ComponentType<SlotType>,
+  ComponentPropsWithoutRef<ElementType>?,
+][];
 
-const combineProviders = (providers: Providers): FC =>
+const combineProviders = (providers: ProvidersType) =>
   providers.reduce(
-    (AccumulatedProviders, [Provider, props = {}]) =>
+    (AccumulatedProviders, [Provider, props]) =>
       ({ children }) => (
         <AccumulatedProviders>
           <Provider {...props}>{children}</Provider>
         </AccumulatedProviders>
       ),
-    ({ children }: any) => <>{children}</>
+    ({ children }: SlotType) => <>{children}</>
   );
 
 export const AllProviders: FunctionComponent<{ children: ReactNode }> =
@@ -29,4 +32,5 @@ export const AllProviders: FunctionComponent<{ children: ReactNode }> =
     [CollectionProvider],
     [ProductProvider],
     [ShoppingCartProvider],
+    [AlertProvider],
   ]);
