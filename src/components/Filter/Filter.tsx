@@ -15,7 +15,7 @@ export const FilterComponent = ({
   onClick,
   children,
 }: FilterProps) => {
-  console.log('FilterComponent');
+  // console.log('FilterComponent');
 
   return (
     <div className={styles.filter}>

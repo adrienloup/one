@@ -5,7 +5,7 @@ export const FooterComponent = () => {
 
   return (
     <footer role="contentinfo" className={styles.footer}>
-      &copy; 2024 One.com Inc.
+      &copy; 2024
     </footer>
   );
 };
