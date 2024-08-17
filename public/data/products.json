@@ -351,6 +351,42 @@
   },
   {
     "id": 19,
+    "collection": "Face",
+    "title": "Dewyplump Collagen Blue Cheek Tint",
+    "short": "Clean, High-Performance Liquid Blush",
+    "description": [
+      "Our high-performance liquid blush glides on and melts in—depositing skin-loving moisture, a buildable blendable formula and decadently creamy, luminous color.",
+      "Our high-performance liquid blush glides on and melts in—depositing skin-loving moisture, a buildable blendable formula and decadently creamy, luminous color."
+    ],
+    "image": "dewyplump-collagen-blue-cheek-tint.webp",
+    "route": "dewyplump-collagen-blue-cheek-tint",
+    "price": 32.8,
+    "quantity": 1,
+    "stock": 10,
+    "discount": 20,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 20,
+    "collection": "Face",
+    "title": "Dewyplump Collagen Green Cheek Tint",
+    "short": "Clean, High-Performance Liquid Blush",
+    "description": [
+      "Our high-performance liquid blush glides on and melts in—depositing skin-loving moisture, a buildable blendable formula and decadently creamy, luminous color.",
+      "Our high-performance liquid blush glides on and melts in—depositing skin-loving moisture, a buildable blendable formula and decadently creamy, luminous color."
+    ],
+    "image": "dewyplump-collagen-green-cheek-tint.webp",
+    "route": "dewyplump-collagen-green-cheek-tint",
+    "price": 32.8,
+    "quantity": 1,
+    "stock": 10,
+    "discount": 20,
+    "new": false,
+    "comming": false
+  },
+  {
+    "id": 21,
     "collection": "Eyes",
     "title": "Staring Mascara",
     "short": "Lifting Mascara",
@@ -369,7 +405,7 @@
     "comming": false
   },
   {
-    "id": 20,
+    "id": 22,
     "collection": "Eyes",
     "title": "Line It Up",
     "short": "24hr Waterproof Gel Liner",
@@ -389,7 +425,7 @@
     "comming": false
   },
   {
-    "id": 21,
+    "id": 23,
     "collection": "Eyes",
     "title": "Pout to Get Real Pink",
     "short": "Matte Lip Liner With Dual-ended Lip Brush",
@@ -408,7 +444,7 @@
     "comming": false
   },
   {
-    "id": 22,
+    "id": 24,
     "collection": "Eyes",
     "title": "Hella on Point",
     "short": "Ultra-Fine Eyebrow Pencil For Natural Brows",
@@ -430,7 +466,7 @@
     "comming": true
   },
   {
-    "id": 23,
+    "id": 25,
     "collection": "Eyes",
     "title": "Paint Brown It Up",
     "short": "24HR Cream Eyeshadow",
@@ -449,7 +485,7 @@
     "comming": false
   },
   {
-    "id": 24,
+    "id": 26,
     "collection": "Eyes",
     "title": "Most Def",
     "short": "Instant Definition Sculpting Eyebrow Pencil For Bold Brows",
@@ -469,7 +505,7 @@
     "comming": false
   },
   {
-    "id": 25,
+    "id": 27,
     "collection": "Eyes",
     "title": "Pout to Get Real Purple",
     "short": "Matte Lip Liner With Dual-ended Lip Brush",
@@ -488,7 +524,7 @@
     "comming": false
   },
   {
-    "id": 26,
+    "id": 28,
     "collection": "Eyes",
     "title": "Paint Blue It Up",
     "short": "24HR Cream Eyeshadow",
@@ -507,7 +543,7 @@
     "comming": false
   },
   {
-    "id": 27,
+    "id": 29,
     "collection": "Eyes",
     "title": "Paint Green It Up",
     "short": "24HR Cream Eyeshadow",
@@ -526,7 +562,7 @@
     "comming": false
   },
   {
-    "id": 28,
+    "id": 30,
     "collection": "Eyes",
     "title": "Paint Pink It Up",
     "short": "24HR Cream Eyeshadow",
