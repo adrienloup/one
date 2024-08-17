@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Lip",
+    "title": "Lips",
     "short": "Instant Definition Sculpting Eyebrow Pencil For Bold Brows",
     "description": [
       "A creamy, high-shine lip gloss with buildable color and a multidimensional, mirror-like finish for the illusion of a fuller, plumper pout.",
@@ -11,8 +11,8 @@
       "Bubble Pop Electric is a high-performance lip gloss with a rich, ultra-smooth formula containing spherical powders for even application and superior wet, glass-like shine.",
       "The creamy, cushiony texture melts into lips, wrapping them in comfortable, non-sticky luminous color that won’t move or bleed."
     ],
-    "image": "lip.avif",
-    "route": "lip"
+    "image": "lips.avif",
+    "route": "lips"
   },
   {
     "id": 2,
