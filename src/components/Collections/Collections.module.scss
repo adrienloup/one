@@ -1,0 +1,76 @@
+$mobile-portrait: 768px;
+
+.collections {
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 0.5rem;
+}
+
+.collection {
+  position: relative;
+  display: flex;
+  width: calc(100% / 3);
+  height: 15rem;
+  padding: 0 0.5rem 0.5rem 0;
+  text-decoration: none;
+
+  @media (max-width: $mobile-portrait) {
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: -0.5rem;
+    right: 0;
+    bottom: 0;
+    left: -0.5rem;
+    z-index: 1;
+    background-color: var(--color-4);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--color-1);
+}
+
+.image {
+  flex: 1;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--color-2);
+}
