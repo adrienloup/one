@@ -11,7 +11,7 @@ export const RadioGroupComponent = ({
   title,
   children,
 }: RadioGroupProps) => {
-  console.log('RadioGroupComponent');
+  // console.log('RadioGroupComponent');
 
   return (
     <div className={[styles.group, cssClass ? ` ${cssClass}` : ''].join('')}>

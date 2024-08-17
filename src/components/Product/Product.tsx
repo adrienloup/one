@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Link } from 'react-router-dom';
+import { useTransitionPage } from '../../hooks/useTransitionPage';
 import { ProductType } from '../../models/Product';
 import { ImageComponent } from '../Image/Image';
 import styles from './Product.module.scss';
@@ -12,10 +12,14 @@ interface ProductProps {
 export const ProductComponent = memo(({ cssClass, product }: ProductProps) => {
   // console.log('ProductComponent');
 
+  const { goTo } = useTransitionPage();
+
   return (
-    <Link
+    <div
       className={[styles.product, cssClass ? ` ${cssClass}` : ''].join('')}
-      to={`/one/product/${product.route}`}
+      onClick={() => {
+        goTo(`/one/product/${product.route}`);
+      }}
     >
       <div className={styles.inner}>
         <ImageComponent
@@ -43,6 +47,6 @@ export const ProductComponent = memo(({ cssClass, product }: ProductProps) => {
         {product.new && <div className={styles.new}>New</div>}
         {product.comming && <div className={styles.comming}>Comming soon</div>}
       </div>
-    </Link>
+    </div>
   );
 });

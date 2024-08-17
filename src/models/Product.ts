@@ -1,6 +1,6 @@
 export interface ProductType {
   id: number;
-  category: string;
+  collection: string;
   title: string;
   short: string;
   description: string[];

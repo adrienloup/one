@@ -7,9 +7,9 @@ $mobile-portrait: 768px;
   position: relative;
   display: flex;
   width: calc(100% / 6);
-  height: 28rem;
+  height: 28.4rem;
   padding: 0 0.5rem 0.5rem 0;
-  text-decoration: none;
+  cursor: pointer;
 
   @media (max-width: $tablet-landscape) {
     width: calc(100% / 5);
@@ -72,13 +72,6 @@ $mobile-portrait: 768px;
 
   @media (max-width: $mobile-portrait) {
     flex: none;
-  }
-
-  img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
   }
 }
 
