@@ -18,6 +18,7 @@ export const FavoriteComponent = memo(
     return (
       <div
         className={[styles.favorite, cssClass ? ` ${cssClass}` : ''].join('')}
+        tabIndex={0}
         onClick={() => {
           goTo(`/one/product/${favorite.route}`);
         }}

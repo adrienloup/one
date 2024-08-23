@@ -12,6 +12,7 @@
 }
 
 .button {
+  visibility: hidden;
   position: absolute;
   top: 50%;
   right: -2.75rem;
@@ -27,7 +28,15 @@
   transition-timing-function: var(--easy-in-out-quad);
 
   &.checked {
+    visibility: visible;
     transform: translate3d(0, -50%, 0);
     opacity: 1;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: var(--color-4);
+    color: var(--color-1);
   }
 }

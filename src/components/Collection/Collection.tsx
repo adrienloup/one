@@ -19,6 +19,7 @@ export const CollectionComponent = ({
   return (
     <div
       className={[styles.collection, cssClass ? ` ${cssClass}` : ''].join('')}
+      tabIndex={0}
       onClick={() => {
         goTo(`/one/collection/${collection.route}`);
       }}
