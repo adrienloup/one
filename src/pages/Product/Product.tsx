@@ -26,7 +26,7 @@ function ProductPage() {
   const productDispatch = useShoppingCartDispatch();
   const location = useLocation();
 
-  const product = products?.filter(
+  const product = products?.find(
     (product) => product.route === location.pathname.split('/').pop()
   );
 
@@ -41,7 +41,7 @@ function ProductPage() {
     });
   };
 
-  useTitle(product ? product[0].title : 'Product');
+  useTitle(product ? product.title : 'Product');
 
   return (
     <>
@@ -51,41 +51,41 @@ function ProductPage() {
           {loading && <LoaderComponent cssClass={styles.loader} size="large" />}
           {product && (
             <>
-              <TitleComponent>{product[0].title}</TitleComponent>
+              <TitleComponent>{product.title}</TitleComponent>
               <div className={styles.content}>
                 <div className={styles.inner}>
                   <ImageComponent
                     cssClass={styles.image}
-                    src={`/one/data/products/${product[0].image}`}
-                    alt={product[0].title}
+                    src={`/one/data/products/${product.image}`}
+                    alt={product.title}
                   />
                   <div className={styles.collection}>
-                    {product[0].collection} collection
+                    {product.collection} collection
                   </div>
                   <div className={styles.price}>
-                    {product[0].discount > 0 ? (
+                    {product.discount > 0 ? (
                       <>
                         <span className={styles.sales}>
-                          ${product[0].price.toFixed(2)}
+                          ${product.price.toFixed(2)}
                         </span>
-                        {` $${((product[0].price * product[0].discount) / 100).toFixed(2)} `}
+                        {` $${((product.price * product.discount) / 100).toFixed(2)} `}
                         <span className={styles.discount}>
-                          {product[0].discount}%
+                          {product.discount}%
                         </span>
                       </>
                     ) : (
-                      `$${product[0].price.toFixed(2)}`
+                      `$${product.price.toFixed(2)}`
                     )}
                   </div>
-                  <div className={styles.short}>{product[0].short}</div>
+                  <div className={styles.short}>{product.short}</div>
                   <div className={styles.description}>
-                    {product[0].description.map((text, index) => (
+                    {product.description.map((text, index) => (
                       <p key={index}>{text}</p>
                     ))}
                   </div>
                   <ButtonComponent
                     cssClass={styles.button}
-                    onClick={() => onClick(product[0])}
+                    onClick={() => onClick(product)}
                   >
                     Add to shopping cart
                   </ButtonComponent>

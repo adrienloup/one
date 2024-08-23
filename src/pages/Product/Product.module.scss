@@ -73,4 +73,11 @@ $mobile-landscape: 1024px;
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--color-2);
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: var(--color-4);
+    color: var(--color-1);
+  }
 }

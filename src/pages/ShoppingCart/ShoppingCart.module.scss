@@ -74,6 +74,13 @@ $mobile-portrait: 768px;
   background-color: var(--color-5);
   font-size: 1.75rem;
   color: var(--color-2);
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: var(--color-4);
+    color: var(--color-1);
+  }
 }
 
 .sales {
@@ -105,4 +112,11 @@ $mobile-portrait: 768px;
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--color-2);
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: var(--color-4);
+    color: var(--color-1);
+  }
 }
