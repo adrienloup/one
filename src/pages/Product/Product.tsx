@@ -8,29 +8,35 @@ import { ProductType } from '../../models/Product';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
 import { ArticleComponent } from '../../components/Article/Article';
 import { TitleComponent } from '../../components/Title/Title';
 import { LoaderComponent } from '../../components/Loader/Loader';
 import { FailureComponent } from '../../components/Failure/Failure';
 import { ImageComponent } from '../../components/Image/Image';
-import { CollectionsComponent } from '../../components/Collections/Collections';
 import { ButtonComponent } from '../../components/Button/Button';
+import { RelatedComponent } from '../../components/Related/Related';
 import styles from './Product.module.scss';
 
 function ProductPage() {
   console.log('ProductPage');
 
+  const location = useLocation();
+  const productDispatch = useShoppingCartDispatch();
   const { loading, errors, products } = useProduct();
   const { addAlert } = useAlertDispatch();
-  const productDispatch = useShoppingCartDispatch();
-  const location = useLocation();
 
-  const product = products?.find(
+  const currentProduct = products?.find(
     (product) => product.route === location.pathname.split('/').pop()
   );
 
-  const onClick = (product: ProductType) => {
+  const related = products?.filter((product: ProductType) => {
+    if (product.collection !== currentProduct?.collection) return false;
+    if (product.id === currentProduct?.id) return false;
+    return true;
+  });
+
+  const addCurrentProduct = (product: ProductType) => {
     productDispatch({
       type: 'added',
       payload: product,
@@ -41,7 +47,7 @@ function ProductPage() {
     });
   };
 
-  useTitle(product ? product.title : 'Product');
+  useTitle(currentProduct ? currentProduct.title : 'Product');
 
   return (
     <>
@@ -49,48 +55,49 @@ function ProductPage() {
       <MainComponent>
         <ArticleComponent>
           {loading && <LoaderComponent cssClass={styles.loader} size="large" />}
-          {product && (
+          {currentProduct && (
             <>
-              <TitleComponent>{product.title}</TitleComponent>
+              <TitleComponent>{currentProduct.title}</TitleComponent>
               <div className={styles.content}>
                 <div className={styles.inner}>
                   <ImageComponent
                     cssClass={styles.image}
-                    src={`/one/data/products/${product.image}`}
-                    alt={product.title}
+                    src={`/one/data/products/${currentProduct.image}`}
+                    alt={currentProduct.title}
                   />
                   <div className={styles.collection}>
-                    {product.collection} collection
+                    {currentProduct.collection} collection
                   </div>
                   <div className={styles.price}>
-                    {product.discount > 0 ? (
+                    {currentProduct.discount > 0 ? (
                       <>
                         <span className={styles.sales}>
-                          ${product.price.toFixed(2)}
+                          ${currentProduct.price.toFixed(2)}
                         </span>
-                        {` $${((product.price * product.discount) / 100).toFixed(2)} `}
+                        {` $${((currentProduct.price * currentProduct.discount) / 100).toFixed(2)} `}
                         <span className={styles.discount}>
-                          {product.discount}%
+                          {currentProduct.discount}%
                         </span>
                       </>
                     ) : (
-                      `$${product.price.toFixed(2)}`
+                      `$${currentProduct.price.toFixed(2)}`
                     )}
                   </div>
-                  <div className={styles.short}>{product.short}</div>
+                  <div className={styles.short}>{currentProduct.short}</div>
                   <div className={styles.description}>
-                    {product.description.map((text, index) => (
+                    {currentProduct.description.map((text, index) => (
                       <p key={index}>{text}</p>
                     ))}
                   </div>
                   <ButtonComponent
                     cssClass={styles.button}
-                    onClick={() => onClick(product)}
+                    onClick={() => addCurrentProduct(currentProduct)}
                   >
                     Add to shopping cart
                   </ButtonComponent>
                 </div>
               </div>
+              <RelatedComponent related={related} />
             </>
           )}
           {errors && (
@@ -98,11 +105,10 @@ function ProductPage() {
               Failed to fetch :(
             </FailureComponent>
           )}
-          <CollectionsComponent />
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      <ScrollToTopComponent />
+      {/* <ScrollToTopComponent /> */}
     </>
   );
 }

@@ -4,7 +4,7 @@ import { useCollection } from '../../hooks/useCollection';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
 import { ArticleComponent } from '../../components/Article/Article';
 import { TitleComponent } from '../../components/Title/Title';
 import { LoaderComponent } from '../../components/Loader/Loader';
@@ -59,7 +59,7 @@ function CollectionPage() {
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      <ScrollToTopComponent />
+      {/* <ScrollToTopComponent /> */}
     </>
   );
 }

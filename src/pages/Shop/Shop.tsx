@@ -5,7 +5,7 @@ import { ProductType } from '../../models/Product';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
 import { ArticleComponent } from '../../components/Article/Article';
 import { AsideComponent } from '../../components/Aside/Aside';
 import { FailureComponent } from '../../components/Failure/Failure';
@@ -141,7 +141,7 @@ function ShopPage() {
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      <ScrollToTopComponent />
+      {/* <ScrollToTopComponent /> */}
     </>
   );
 }

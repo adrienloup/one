@@ -3,7 +3,7 @@ import { useTitle } from '../../hooks/useTitle';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
 import { ArticleComponent } from '../../components/Article/Article';
 import { HeroComponent } from '../../components/Hero/Hero';
 import { CollectionsComponent } from '../../components/Collections/Collections';
@@ -27,7 +27,7 @@ function HomePage() {
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      <ScrollToTopComponent />
+      {/* <ScrollToTopComponent /> */}
     </>
   );
 }
