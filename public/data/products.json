@@ -386,6 +386,26 @@
     "comming": false
   },
   {
+    "id": 13,
+    "collection": "Face",
+    "title": "Pick It Up Turquoise",
+    "short": "Contour & Bronzer Duo",
+    "description": [
+      "So easy to use, you’ll be sculpted in seconds.",
+      "Hydrating cream contour is formulated with Squalene and Cellulose to glide on, giving you instant lift.",
+      "Silky soft-matte powder bronzer blends seamlessly for natural, sunkissed warmth.",
+      "Made to layer effortlessly for a smooth finish, never streaky."
+    ],
+    "image": "pick-it-up-turquoise.webp",
+    "route": "pick-it-up-turquoise",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 30,
+    "discount": 0,
+    "new": false,
+    "comming": true
+  },
+  {
     "id": 21,
     "collection": "Eyes",
     "title": "Staring Mascara",
