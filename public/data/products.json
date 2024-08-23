@@ -95,7 +95,7 @@
     "quantity": 1,
     "stock": 20,
     "discount": 0,
-    "new": true,
+    "new": false,
     "comming": false
   },
   {
@@ -248,7 +248,7 @@
     "stock": 20,
     "discount": 0,
     "new": false,
-    "comming": false
+    "comming": true
   },
   {
     "id": 14,
@@ -305,7 +305,7 @@
     "quantity": 1,
     "stock": 30,
     "discount": 0,
-    "new": false,
+    "new": true,
     "comming": false
   },
   {
@@ -440,7 +440,7 @@
     "stock": 30,
     "discount": 0,
     "new": false,
-    "comming": false
+    "comming": true
   },
   {
     "id": 24,
@@ -478,7 +478,7 @@
     "quantity": 1,
     "stock": 30,
     "discount": 0,
-    "new": false,
+    "new": true,
     "comming": false
   },
   {
@@ -538,7 +538,7 @@
     "price": 22.6,
     "quantity": 1,
     "stock": 30,
-    "discount": 20,
+    "discount": 0,
     "new": false,
     "comming": false
   },
@@ -558,7 +558,7 @@
     "quantity": 1,
     "stock": 30,
     "discount": 0,
-    "new": false,
+    "new": true,
     "comming": false
   },
   {
