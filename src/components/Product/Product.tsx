@@ -17,6 +17,7 @@ export const ProductComponent = memo(({ cssClass, product }: ProductProps) => {
   return (
     <div
       className={[styles.product, cssClass ? ` ${cssClass}` : ''].join('')}
+      tabIndex={0}
       onClick={() => {
         goTo(`/one/product/${product.route}`);
       }}

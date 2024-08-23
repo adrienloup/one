@@ -33,20 +33,17 @@ $mobile-portrait: 768px;
   }
 
   .active & {
-    padding: 0.75rem;
+    padding: 0.5rem;
     background-color: var(--color-5);
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--color-2);
     animation: Appear 0.35s var(--easy-in-out-quad);
-
-    @media (max-width: $mobile-portrait) {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
 
     &:hover,
     &:focus-visible {
       outline: none;
+      background-color: var(--color-4);
+      color: var(--color-1);
     }
   }
 }
