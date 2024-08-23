@@ -579,5 +579,24 @@
     "discount": 20,
     "new": false,
     "comming": false
+  },
+  {
+    "id": 31,
+    "collection": "Eyes",
+    "title": "Pout to Get Real Blue",
+    "short": "Matte Lip Liner With Dual-ended Lip Brush",
+    "description": [
+      "Chisel-tipped lip liner with dual-ended lip brush to easily overline and contour lips for the look of a fuller, more defined pout.",
+      "This retractable lip liner is designed with a precision tip to easily sculpt lips into desired shape, a flat edge to fill lips with rich, comfortable color, and a lip brush to blend and diffuse harsh lines.",
+      "Layers seamlessly under lip gloss or lipstick to create the illusion of naturally fuller lips."
+    ],
+    "image": "pout-to-get-real-blue.webp",
+    "route": "pout-to-get-real-blue",
+    "price": 19.99,
+    "quantity": 1,
+    "stock": 30,
+    "discount": 30,
+    "new": false,
+    "comming": false
   }
 ]
