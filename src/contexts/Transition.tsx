@@ -23,6 +23,7 @@ export const TransitionPageProvider = ({ children }: SlotType) => {
     }, 0);
     setTimeout(() => {
       navigate(route);
+      window.scrollTo(0, 0);
       setCssClass('end');
     }, 500);
     setTimeout(() => {
