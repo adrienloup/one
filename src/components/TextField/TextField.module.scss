@@ -1,0 +1,47 @@
+.textfield {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-1);
+  border: 0.25rem solid var(--color-2);
+  color: var(--color-2);
+
+  &.success {
+    border-color: red;
+  }
+
+  &.warning {
+    border-color: red;
+  }
+
+  &.error {
+    border-color: red;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 0 0.75rem 0 0.25rem;
+    background-color: transparent;
+    border: 0;
+    font-family: var(--font-text);
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--color-2);
+    outline: 0;
+
+    &::placeholder {
+      color: var(--color-2);
+    }
+
+    & + .icon {
+      margin: 0 1rem 0 0;
+    }
+  }
+}
+
+.icon {
+  margin-left: 0.75rem;
+  font-size: 2rem;
+  pointer-events: none;
+}

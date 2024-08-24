@@ -14,7 +14,6 @@
 
 .inner {
   backface-visibility: hidden;
-  pointer-events: initial;
 
   .active & {
     position: fixed;
@@ -22,7 +21,6 @@
     top: 5rem;
     right: 0;
     left: 0;
-    pointer-events: none;
   }
 
   .hidden & {
