@@ -1,0 +1,47 @@
+.cursor {
+  position: fixed;
+  top: -4rem;
+  left: -4rem;
+  z-index: 5;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  transition-property: width, height, opacity, transform;
+  transition-duration: 0.25s;
+  transition-timing-function: var(--easy-in-out-quad);
+  transform-style: preserve-3d;
+
+  @media (hover: none) {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid var(--color-1);
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s var(--easy-in-out-quint);
+    will-change: background-color;
+  }
+}
+
+:global(.scaled) {
+  width: 110px;
+  height: 110px;
+
+  span {
+    background-color: var(--color-1);
+  }
+}
+
+body:hover .cursor {
+  opacity: 1;
+}

@@ -1,22 +1,17 @@
 import { ImageComponent } from '../Image/Image';
 import { StickyComponent } from '../Sticky/Sticky';
 import { SearchComponent } from '../Search/Search';
-import lips from '../../assets/lips.webp';
-import eyes from '../../assets/eyes.webp';
-import face from '../../assets/face.webp';
-import lipstick from '../../assets/lipstick.webp';
-import blush from '../../assets/blush.webp';
+import blush from '../../assets/hero/blush.webp';
+import lips from '../../assets/hero/lips.webp';
+import eyes from '../../assets/hero/eyes.webp';
 import styles from './Hero.module.scss';
 
-const images = [lips, eyes, face, lipstick, blush];
+const heros = [blush, lips, eyes];
 
 export const HeroComponent = ({ cssClass }: { cssClass?: string }) => {
   // console.log("HeroComponent");
 
-  const random = () => {
-    const image = images[Math.floor(Math.random() * images.length)];
-    return image;
-  };
+  const random = () => heros[Math.floor(Math.random() * heros.length)];
 
   return (
     <div className={[styles.hero, cssClass ? ` ${cssClass}` : ''].join('')}>

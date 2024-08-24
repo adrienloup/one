@@ -12,7 +12,7 @@ export const ImageComponent = ({ cssClass, src, alt }: ImageProps) => {
   // console.log('ImageComponent');
 
   const [loading, setLoading] = useState(true);
-  const ref = useRef<HTMLImageElement | null>(null);
+  const image = useRef<HTMLImageElement | null>(null);
 
   const onLoad = () => setLoading(false);
   const onError = () => console.log(`Failed to ${src}'s image`);
@@ -21,7 +21,7 @@ export const ImageComponent = ({ cssClass, src, alt }: ImageProps) => {
     <div className={[styles.image, cssClass ? ` ${cssClass}` : ''].join('')}>
       {loading && <LoaderComponent cssClass={styles.loader} />}
       <img
-        ref={ref}
+        ref={image}
         src={src}
         alt={alt}
         onLoad={onLoad}

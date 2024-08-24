@@ -9,6 +9,8 @@ export const RelatedComponent = ({
 }: {
   related: ProductType[] | undefined;
 }) => {
+  // console.log('RelatedComponent');
+
   const list = related?.map((product: ProductType) => (
     <ProductComponent key={product.id} product={product} />
   ));

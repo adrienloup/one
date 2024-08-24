@@ -1,5 +1,6 @@
-import { memo } from 'react';
+import { memo, useRef } from 'react';
 import { useTransitionPage } from '../../hooks/useTransitionPage';
+import { useCursor } from '../../hooks/useCursor';
 import { ProductType } from '../../models/Product';
 import { ImageComponent } from '../Image/Image';
 import styles from './Product.module.scss';
@@ -12,10 +13,14 @@ interface ProductProps {
 export const ProductComponent = memo(({ cssClass, product }: ProductProps) => {
   // console.log('ProductComponent');
 
+  const ref = useRef<HTMLDivElement>(null);
   const { goTo } = useTransitionPage();
+
+  useCursor(ref);
 
   return (
     <div
+      ref={ref}
       className={[styles.product, cssClass ? ` ${cssClass}` : ''].join('')}
       tabIndex={0}
       onClick={() => {

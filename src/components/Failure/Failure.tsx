@@ -6,6 +6,8 @@ interface FailureProps extends SlotType {
 }
 
 export const FailureComponent = ({ cssClass, children }: FailureProps) => {
+  // console.log('FailureComponent');
+
   return (
     <div className={[styles.failure, cssClass ? ` ${cssClass}` : ''].join('')}>
       {children}

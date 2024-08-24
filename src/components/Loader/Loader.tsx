@@ -7,6 +7,8 @@ interface LoaderProps {
 }
 
 export const LoaderComponent = ({ cssClass, size = 'medium' }: LoaderProps) => {
+  // console.log('LoaderComponent');
+
   return (
     <div
       className={[

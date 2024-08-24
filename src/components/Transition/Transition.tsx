@@ -1,6 +1,8 @@
 import styles from './Transition.module.scss';
 
 export const TransitionComponent = ({ cssClass }: { cssClass: string }) => {
+  // console.log('TransitionComponent');
+
   return (
     <div className={[styles.transition, ` ${styles[cssClass]}`].join('')}>
       <div className={`${styles.slide} ${styles.slide1}`}>

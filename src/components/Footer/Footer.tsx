@@ -1,3 +1,4 @@
+import { version } from './../../../package.json';
 import styles from './Footer.module.scss';
 
 export const FooterComponent = () => {
@@ -5,7 +6,7 @@ export const FooterComponent = () => {
 
   return (
     <footer role="contentinfo" className={styles.footer}>
-      &copy; 2024
+      &copy; One {version}
     </footer>
   );
 };

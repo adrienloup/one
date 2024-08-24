@@ -1,4 +1,5 @@
-import { useId } from 'react';
+import { useId, useRef } from 'react';
+import { useCursor } from '../../hooks/useCursor';
 import { IconComponent } from '../Icon/Icon';
 import styles from './Radio.module.scss';
 
@@ -22,9 +23,15 @@ export const RadioComponent = ({
   // console.log('RadioComponent');
 
   const uId = useId();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useCursor(ref);
 
   return (
-    <div className={[styles.radio, cssClass ? ` ${cssClass}` : ''].join('')}>
+    <div
+      ref={ref}
+      className={[styles.radio, cssClass ? ` ${cssClass}` : ''].join('')}
+    >
       <input
         id={uId}
         className={styles.input}

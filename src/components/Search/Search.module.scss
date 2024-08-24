@@ -37,7 +37,7 @@ $mobile-portrait: 768px;
     background-color: var(--color-5);
     font-size: 1rem;
     color: var(--color-2);
-    animation: Appear 0.35s var(--easy-in-out-quad);
+    animation: Appear 0.5s var(--easy-in-out-quad);
 
     &:hover,
     &:focus-visible {

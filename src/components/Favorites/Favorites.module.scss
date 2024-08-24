@@ -1,3 +1,6 @@
+$mobile-landscape: 1024px;
+$mobile-portrait: 768px;
+
 .failure {
   margin: 0.5rem 0.5rem 0;
 }
@@ -11,4 +14,17 @@
   flex-flow: row wrap;
   justify-content: center;
   padding-left: 0.5rem;
+}
+
+.highlight {
+  width: calc(100% / 6);
+  height: 33rem;
+
+  @media (max-width: $mobile-landscape) {
+    width: calc(100% / 3);
+  }
+
+  @media (max-width: $mobile-portrait) {
+    display: none;
+  }
 }

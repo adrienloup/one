@@ -22,7 +22,7 @@ export const StickyComponent = ({ children }: SlotType) => {
   const inner = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const onScroll = () => {
       if (!inner.current && !sticky.current) return;
 
       const scrollTop = document.documentElement.scrollTop;
@@ -47,8 +47,8 @@ export const StickyComponent = ({ children }: SlotType) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   });
 
   const childrenWithProps = Children.map(children, (child) => {
