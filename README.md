@@ -1,6 +1,6 @@
 # One
 
-[Demo Preview](https://adrienloup.github.io/one/)
+[Demo](https://adrienloup.github.io/one/)
 
 ## Requirements
 
