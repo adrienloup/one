@@ -2,8 +2,8 @@ import { createContext, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AlertType } from '../models/Alert';
 import { SlotType } from '../models/Slot';
-import { Alerts } from '../components/Alerts/Alerts';
-import { Alert } from '../components/Alert/Alert';
+import { AlertsComponent } from '../components/Alerts/Alerts';
+import { AlertComponent } from '../components/Alert/Alert';
 
 export const AlertContext = createContext<AlertType[]>([]);
 
@@ -17,6 +17,8 @@ export const AlertDispatchContext = createContext<{
 
 export const AlertProvider = ({ children }: SlotType) => {
   const [alerts, setAlerts] = useState<AlertType[]>([]);
+
+  const target = document.querySelector('#_one_1em0m_3') ?? document.body;
 
   const addAlert = (alert: AlertType) => {
     const id =
@@ -35,9 +37,9 @@ export const AlertProvider = ({ children }: SlotType) => {
       <AlertDispatchContext.Provider value={{ addAlert, removeAlert }}>
         {alerts.length > 0 &&
           createPortal(
-            <Alerts>
+            <AlertsComponent>
               {alerts.map((alert: AlertType) => (
-                <Alert
+                <AlertComponent
                   key={alert.id}
                   onRemove={() => {
                     removeAlert(alert.id as string);
@@ -45,8 +47,8 @@ export const AlertProvider = ({ children }: SlotType) => {
                   {...alert}
                 />
               ))}
-            </Alerts>,
-            document.body
+            </AlertsComponent>,
+            target
           )}
         {children}
       </AlertDispatchContext.Provider>
