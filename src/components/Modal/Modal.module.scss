@@ -1,0 +1,93 @@
+$tablet-portrait: 768px;
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.inner {
+  position: sticky;
+  top: 0;
+  left: calc(50% - 24rem);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 48rem;
+  padding: 2rem;
+  background-color: var(--color-1);
+
+  @media (max-width: $tablet-portrait) {
+    left: 0;
+    width: 100%;
+  }
+
+  .open & {
+    animation: Slide 0.15s var(--easy-in-out-quad);
+  }
+}
+
+.head {
+  padding-right: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.75rem;
+
+  span {
+    -webkit-text-stroke: 0.08rem var(--color-1);
+    color: transparent;
+  }
+}
+
+.body {
+  margin-top: 1.5rem;
+}
+
+.close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--color-5);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-2);
+
+  &:hover {
+    background-color: var(--color-4);
+  }
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: var(--color-2);
+  opacity: 0.75;
+  cursor: pointer;
+
+  .open & {
+    animation: Appear 0.15s var(--easy-in-out-quad);
+  }
+}
+
+@keyframes Appear {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes Slide {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+}

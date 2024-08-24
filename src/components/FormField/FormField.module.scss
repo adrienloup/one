@@ -1,0 +1,21 @@
+.formfield {
+  // font-family: var(--font-text-regular);
+  background-color: red;
+}
+
+.label {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  // font-family: var(--font-text-bold);
+}
+
+.helpertext {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.errormessage {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  // color: var(--color-red);
+}

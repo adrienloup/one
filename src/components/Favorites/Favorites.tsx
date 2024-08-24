@@ -33,8 +33,8 @@ export const FavoritesComponent = () => {
     />
   ));
 
-  const mixedFavorite = randomList(favoriteList ? favoriteList : []);
-  const mixedHighlight = randomList(highlightList);
+  const randomFavorite = randomList(favoriteList ? favoriteList : []);
+  const randomHighlight = randomList(highlightList);
 
   return (
     <>
@@ -45,12 +45,12 @@ export const FavoritesComponent = () => {
           <ListComponent
             cssClass={styles.favorites}
             list={[
-              mixedFavorite[0],
-              mixedHighlight[0],
-              mixedFavorite[1],
-              mixedHighlight[1],
-              mixedFavorite[2],
-              mixedHighlight[2],
+              randomFavorite[0],
+              randomHighlight[0],
+              randomFavorite[1],
+              randomHighlight[1],
+              randomFavorite[2],
+              randomHighlight[2],
             ]}
           />
         </>

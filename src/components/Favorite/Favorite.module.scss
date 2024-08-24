@@ -74,12 +74,8 @@ $mobile-portrait: 768px;
   text-align: center;
   line-height: 1.25;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--color-2);
-
-  @media (max-width: $mobile-landscape) {
-    font-size: 2rem;
-  }
 
   @media (max-width: $mobile-portrait) {
     text-align: left;
