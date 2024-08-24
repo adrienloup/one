@@ -1,10 +1,10 @@
+$mobile-landscape: 1024px;
 $mobile-portrait: 768px;
 
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
 
   &.active {
     justify-content: flex-end;
@@ -17,14 +17,17 @@ $mobile-portrait: 768px;
   background-color: transparent;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--color-1);
-  pointer-events: initial;
-  cursor: pointer;
+  pointer-events: none;
+
+  @media (max-width: $mobile-landscape) {
+    font-size: 2.75rem;
+  }
 
   @media (max-width: $mobile-portrait) {
     padding: 0.5rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   &:hover,
@@ -38,6 +41,7 @@ $mobile-portrait: 768px;
     font-size: 1rem;
     color: var(--color-2);
     animation: Appear 0.5s var(--easy-in-out-quad);
+    pointer-events: initial;
 
     &:hover,
     &:focus-visible {
