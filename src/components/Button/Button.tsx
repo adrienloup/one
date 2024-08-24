@@ -1,5 +1,6 @@
-import { memo } from 'react';
+import { memo, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useCursor } from '../../hooks/useCursor';
 import { SlotType } from '../../models/Slot';
 import styles from './Button.module.scss';
 
@@ -24,6 +25,10 @@ export const ButtonComponent = memo(
   }: ButtonProps) => {
     // console.log('ButtonComponent');
 
+    const ref = useRef<HTMLButtonElement>(null);
+
+    useCursor(ref);
+
     const link = (
       <Link
         to={to!}
@@ -46,6 +51,7 @@ export const ButtonComponent = memo(
 
     const button = (
       <button
+        ref={ref}
         type={type}
         className={[styles.button, cssClass ? ` ${cssClass}` : ''].join('')}
         disabled={disabled}

@@ -1,8 +1,8 @@
 import { CardComponent } from '../Card/Card';
 import { TitleComponent } from '../Title/Title';
-import clean from '../../assets/clean.webp';
-import designed from '../../assets/designed.webp';
-import performance from '../../assets/performance.webp';
+import clean from '../../assets/makeup/clean.webp';
+import designed from '../../assets/makeup/designed.webp';
+import performance from '../../assets/makeup/performance.webp';
 import styles from './Cards.module.scss';
 
 export const CardsComponent = ({ cssClass }: { cssClass?: string }) => {

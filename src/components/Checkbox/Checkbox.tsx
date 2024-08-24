@@ -1,4 +1,5 @@
-import { useId } from 'react';
+import { useId, useRef } from 'react';
+import { useCursor } from '../../hooks/useCursor';
 import { IconComponent } from '../Icon/Icon';
 import styles from './Checkbox.module.scss';
 
@@ -18,9 +19,15 @@ export const CheckboxComponent = ({
   // console.log('CheckboxComponent');
 
   const uId = useId();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useCursor(ref);
 
   return (
-    <div className={[styles.checkbox, cssClass ? ` ${cssClass}` : ''].join('')}>
+    <div
+      ref={ref}
+      className={[styles.checkbox, cssClass ? ` ${cssClass}` : ''].join('')}
+    >
       <input
         id={uId}
         type="checkbox"

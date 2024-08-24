@@ -3,7 +3,9 @@ import { AlertType } from '../../models/Alert';
 import { IconComponent } from '../Icon/Icon';
 import styles from './Alert.module.scss';
 
-export const Alert = ({ title, onRemove = () => {} }: AlertType) => {
+export const AlertComponent = ({ title, onRemove = () => {} }: AlertType) => {
+  // console.log('AlertComponent');
+
   const outTimer = useRef(0);
   const removeTimer = useRef(0);
   const [out, setOut] = useState(false);

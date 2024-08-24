@@ -6,6 +6,7 @@
   padding: 0.5rem 0.75rem 0.5rem 0.5rem;
   background-color: var(--color-6);
   animation: Appear 0.5s var(--easy-in-out-quad);
+  pointer-events: initial;
 }
 
 .title {

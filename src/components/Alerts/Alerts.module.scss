@@ -1,16 +1,11 @@
-$tablet-portrait: 769px;
-
 .alerts {
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  background-color: rgba(255, 255, 255, 0.45);
-  animation: Appear 0.15s var(--easy-in-out-quad);
+  z-index: 3;
+  pointer-events: none;
 }
 
 .inner {
@@ -18,11 +13,5 @@ $tablet-portrait: 769px;
   top: 5rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-
-@keyframes Appear {
-  0% {
-    opacity: 0;
-  }
+  align-items: center;
 }

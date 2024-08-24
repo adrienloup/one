@@ -1,31 +1,32 @@
 import { useState } from 'react';
+import { useSessionStorage } from '../../hooks/useSessionStorage';
 import { ButtonComponent } from '../Button/Button';
 import { IconComponent } from '../Icon/Icon';
 import styles from './Banner.module.scss';
 
-interface BannerProps {
-  cssClass?: string;
-}
-
-export const BannerComponent = ({ cssClass }: BannerProps) => {
+export const BannerComponent = ({ cssClass }: { cssClass?: string }) => {
   // console.log('BannerComponent');
 
-  const [displayed, setDisplay] = useState(true);
+  const [banner, setBanner] = useSessionStorage('promotion-banner', '');
+  const [hidden, setDisplay] = useState(!!banner);
+
+  const onClick = () => {
+    setBanner('hidden');
+    setDisplay(true);
+  };
 
   return (
     <>
-      {displayed && (
+      {!hidden && (
         <div
           className={[styles.banner, cssClass ? ` ${cssClass}` : ''].join('')}
+          id="promotion-banner"
         >
           <div className={styles.title}>
             Promotions for the best quality and innovation you love with the
             convenience and exceptional service at One.com
           </div>
-          <ButtonComponent
-            cssClass={styles.button}
-            onClick={() => setDisplay(false)}
-          >
+          <ButtonComponent cssClass={styles.button} onClick={onClick}>
             <IconComponent name="close" />
           </ButtonComponent>
         </div>
