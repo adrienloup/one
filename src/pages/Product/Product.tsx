@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { useTitle } from '../../hooks/useTitle';
 import { useLocation } from 'react-router-dom';
+import { useTitle } from '../../hooks/useTitle';
 import { useProduct } from '../../hooks/useProduct';
 import { useAlertDispatch } from '../../hooks/useAlert';
 import { useShoppingCartDispatch } from '../../hooks/useShoppingCart';
@@ -8,7 +8,7 @@ import { ProductType } from '../../models/Product';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+import { CursorComponent } from '../../components/Cursor/Cursor';
 import { ArticleComponent } from '../../components/Article/Article';
 import { TitleComponent } from '../../components/Title/Title';
 import { LoaderComponent } from '../../components/Loader/Loader';
@@ -19,7 +19,7 @@ import { RelatedComponent } from '../../components/Related/Related';
 import styles from './Product.module.scss';
 
 function ProductPage() {
-  console.log('ProductPage');
+  // console.log('ProductPage');
 
   const location = useLocation();
   const productDispatch = useShoppingCartDispatch();
@@ -108,7 +108,7 @@ function ProductPage() {
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      {/* <ScrollToTopComponent /> */}
+      <CursorComponent />
     </>
   );
 }

@@ -3,7 +3,7 @@ import { useTitle } from '../../hooks/useTitle';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+import { CursorComponent } from '../../components/Cursor/Cursor';
 import { ArticleComponent } from '../../components/Article/Article';
 import { HeroComponent } from '../../components/Hero/Hero';
 import { CollectionsComponent } from '../../components/Collections/Collections';
@@ -11,7 +11,7 @@ import { FavoritesComponent } from '../../components/Favorites/Favorites';
 import { CardsComponent } from '../../components/Cards/Cards';
 
 function HomePage() {
-  console.log('HomePage');
+  // console.log('HomePage');
 
   useTitle('Welcome');
 
@@ -27,7 +27,7 @@ function HomePage() {
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      {/* <ScrollToTopComponent /> */}
+      <CursorComponent />
     </>
   );
 }

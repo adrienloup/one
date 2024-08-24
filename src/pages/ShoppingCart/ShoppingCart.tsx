@@ -9,7 +9,7 @@ import { ProductType } from '../../models/Product';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+import { CursorComponent } from '../../components/Cursor/Cursor';
 import { ArticleComponent } from '../../components/Article/Article';
 import { TitleComponent } from '../../components/Title/Title';
 import { FailureComponent } from '../../components/Failure/Failure';
@@ -19,7 +19,7 @@ import { IconComponent } from '../../components/Icon/Icon';
 import styles from './ShoppingCart.module.scss';
 
 function ShoppingCartPage() {
-  console.log('ShoppingCartPage');
+  // console.log('ShoppingCartPage');
 
   const { addAlert } = useAlertDispatch();
   const products = useShoppingCart();
@@ -149,7 +149,7 @@ function ShoppingCartPage() {
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      {/* <ScrollToTopComponent /> */}
+      <CursorComponent />
     </>
   );
 }

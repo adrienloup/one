@@ -1,11 +1,12 @@
 import { memo, useState } from 'react';
+import { randomList } from '../../utils/randomList';
 import { useTitle } from '../../hooks/useTitle';
 import { useProduct } from '../../hooks/useProduct';
 import { ProductType } from '../../models/Product';
 import { HeaderComponent } from '../../components/Header/Header';
 import { MainComponent } from '../../components/Main/Main';
 import { FooterComponent } from '../../components/Footer/Footer';
-// import { ScrollToTopComponent } from '../../components/ScrollToTop/ScrollToTop';
+import { CursorComponent } from '../../components/Cursor/Cursor';
 import { ArticleComponent } from '../../components/Article/Article';
 import { AsideComponent } from '../../components/Aside/Aside';
 import { FailureComponent } from '../../components/Failure/Failure';
@@ -14,21 +15,29 @@ import { BannerComponent } from '../../components/Banner/Banner';
 import { TitleComponent } from '../../components/Title/Title';
 import { ListComponent } from '../../components/List/List';
 import { ProductComponent } from '../../components/Product/Product';
+import { HighlightComponent } from '../../components/Highlight/Highlight';
 import { FilterComponent } from '../../components/Filter/Filter';
 import { RadioGroupComponent } from '../../components/RadioGroup/RadioGroup';
 import { RadioComponent } from '../../components/Radio/Radio';
 import { CheckboxComponent } from '../../components/Checkbox/Checkbox';
+import lips1 from '../../assets/highlight/lips-1.webp';
+import lips2 from '../../assets/highlight/lips-2.webp';
+import face1 from '../../assets/highlight/face-1.webp';
+import eyes1 from '../../assets/highlight/eyes-1.webp';
+import eyes2 from '../../assets/highlight/eyes-2.webp';
 import styles from './Shop.module.scss';
 
+const highlights = [lips1, lips2, face1, eyes1, eyes2];
+
 function ShopPage() {
-  console.log('ShopPage');
+  // console.log('ShopPage');
 
   const { loading, errors, products } = useProduct();
   const [isChecked, setChecked] = useState('');
   const [isNew, setNew] = useState(false);
   const [isDiscount, setDiscount] = useState(false);
 
-  const filteredList = products?.filter((product: ProductType) => {
+  const filteredProductList = products?.filter((product: ProductType) => {
     if (isChecked === 'Lips' && product.collection !== 'Lips') return false;
     if (isChecked === 'Face' && product.collection !== 'Face') return false;
     if (isChecked === 'Eyes' && product.collection !== 'Eyes') return false;
@@ -37,22 +46,25 @@ function ShopPage() {
     return true;
   });
 
-  const mixedList = () => {
-    /*eslint prefer-const: "off"*/
-    let i = filteredList?.length;
-    while (--i! > 0) {
-      const product = Math.floor(Math.random() * i!);
-      [filteredList![product], filteredList![i!]] = [
-        filteredList![i!],
-        filteredList![product],
-      ];
-    }
-    return filteredList;
-  };
-
-  const list = mixedList()?.map((product: ProductType) => (
+  const productList = filteredProductList?.map((product: ProductType) => (
     <ProductComponent key={product.id} product={product} />
   ));
+
+  const highlightList = highlights.map((highlight: string, index: number) => (
+    <HighlightComponent key={`${highlight}-${index}`} src={highlight} />
+  ));
+
+  const mixedHighlight = randomList(highlightList);
+
+  const filteredHighlightList = mixedHighlight.filter(
+    (highlight: JSX.Element) => mixedHighlight.indexOf(highlight) < 2
+  );
+
+  const list = productList
+    ? isChecked || isNew || isDiscount
+      ? randomList(productList)
+      : randomList([...productList, ...filteredHighlightList])
+    : [];
 
   useTitle('Shop');
 
@@ -141,7 +153,7 @@ function ShopPage() {
         </ArticleComponent>
       </MainComponent>
       <FooterComponentMemo />
-      {/* <ScrollToTopComponent /> */}
+      <CursorComponent />
     </>
   );
 }
